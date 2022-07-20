@@ -16,7 +16,7 @@ const weatherStack = (latitude,longitude,callback)=> {
           callback('Please provide valid location!',undefined)
       }
       else{
-        const forecastdata = { req_data : body.current.weather_descriptions[0]+'. It is currently ' +body.current.temperature + ' degress out. It feels like ' + body.current.feelslike + ' degress out.'}
+        const forecastdata = { req_data : "Today's descriptive weather condition is " + body.current.weather_descriptions[0]+'. It is currently ' +body.current.temperature + ' degress out. It feels like ' + body.current.feelslike + ' degress out. ' + "Humidity is " + body.current.humidity + "."}
 
           callback(undefined,forecastdata)
       }
